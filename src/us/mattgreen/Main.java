@@ -9,12 +9,12 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Talkable> zoo = new ArrayList<>();
+        ConsoleInput input = new ConsoleInput();
 
-        // Lines to Replace Begin Here
-        zoo.add(new Dog(true, "Bean"));
-        zoo.add(new Cat(9, "Charlie"));
-        zoo.add(new Teacher(44, "Stacy Read"));
-        // End Lines to Replace
+        System.out.println("Welcome! Please add three new animals.");
+        input.readTalkable(zoo);
+        input.readTalkable(zoo);
+        input.readTalkable(zoo);
 
         for (Talkable thing : zoo) {
             printOut(thing);
